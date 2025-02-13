@@ -1,0 +1,133 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  
+  
+  .container {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #3a3a3a;
+    color: white;
+    min-width: 0; 
+  }
+  
+
+  input:focus {
+    outline: none;
+    border: 2px solid #007bff;
+  }
+  
+  button {
+    padding: 12px 16px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    min-width: 100px; 
+  }
+  
+  button:hover {
+    background: #388e3c;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Todo List Item Styling */
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3a3a3a;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    color: white;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.3s forwards;
+    transition: background 0.3s ease-in-out;
+  }
+
+  /* Hover Effect for TODO Items */
+  li:hover {
+    background: #444;
+  }
+  
+  /* Smoothly fade in new TODOs */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .empty-message {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Delete Button */
+  .delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s;
+  }
+
+  .delete-btn:hover {
+    background: #cc0000;
+  }
+
+  .delete-btn:active {
+    transform: scale(0.9);
+  }
